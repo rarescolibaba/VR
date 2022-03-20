@@ -1,0 +1,28 @@
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	* {
+		animation: none;
+		transition: none;
+	}
+}
+p {
+	font-family: "Cabin", sans-serif;
+	font-size: 1.6rem;
+	color: white;
+	padding: 1rem;
+}
+h1, q {
+	font-family: "Source Sans Pro", sans-serif;
+	text-transform: uppercase;
+}
+h1 {
+	font-size: 4rem;
+	color: bisque;
+}
+#circle {
+    background: url("./assets/headset.jpg");
+		background-size: cover;
+		background-position: 15%;
+}

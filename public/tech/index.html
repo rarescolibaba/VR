@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Source+Sans+Pro:wght@900&display=swap"
     rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./tech.css">
   <script src="https://unpkg.com/petite-vue" defer init></script>
   <script src="../main.js" type="module" defer></script>
   <title>Realitatea virtuală • Prezentare</title>
@@ -28,7 +29,33 @@
       </ul>
     </header>
   </div>
-  <h1>Tehnologia din spatele realității virtuale</h1>
+  <video class="hero" autoplay="" muted="" loop=""><source src="assets/hero.webm" type="video/webm"></video>
+  <main>
+    <section>
+      <article style="width: 100vw; height: 100vh;">
+        <div class="wordmark">
+          <span class="marky">v</span>
+          <span class="marky" style="animation: fadeIn 4s;">r</span>
+        </div>
+        <a href="#intermediate" class="scroller">
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+          <div class="arrow"></div>
+        </a>
+      </article>
+      <article id="lower">
+        <div id="transitive">
+        </div>
+        <div id="intermediate">
+          <div id="set-height"></div>
+          <video id="v0" tabindex="0" autobuffer preload>
+            <source type="video/webm; codecs='vp9'" src="assets/headset.webm"></source>
+          </video>
+          <h1><a href="despre.html">Despre VR</a></h1>
+        </div>
+      </article>
+    </section>
+  </main>
 </body>
 
 </html>

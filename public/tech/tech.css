@@ -1,0 +1,149 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0;
+}
+video.hero {
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translateX(-50%) translateY(-50%);
+	min-width: 100%;
+	min-height: 100%;
+	width:auto;
+	height:auto;
+	z-index:-999;
+	background: white;
+	mix-blend-mode: overlay;
+}
+.centerH {
+	/* center horizontally */
+}
+.wordmark {
+	animation: fadeIn 3.5s;
+	text-transform: uppercase;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 35vw;
+	line-height: 0;
+	text-align: center;
+	overflow: hidden;
+	height: 96vh;
+	display: flex;
+	margin: auto;
+	align-items: center;
+	justify-content: center;
+	transition: color 0.4s ease, mix-blend-mode 0.4s ease;
+	color: bisque;
+	mix-blend-mode: exclusion;
+	cursor: default;
+}
+.marky {
+	transition: opacity 0.4s ease;
+	opacity: 1;
+}
+.marky:hover {
+	opacity: 0.8;
+}
+.scroller {
+  display: block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(0deg);
+}
+.scroller:hover {
+  cursor: pointer;
+}
+.scroller:hover .arrow {
+  top: 50%;
+}
+.scroller:hover .arrow:before {
+  transform: translate(-50%, -50%) rotateZ(-30deg);
+}
+.scroller:hover .arrow:after {
+  transform: translate(-50%, -50%) rotateZ(30deg);
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transition: all 0.4s ease;
+}
+.arrow:before, .arrow:after {
+  transition: all 0.4s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: bottom right;
+  background: bisque;
+  width: 4px;
+  height: 50px;
+  border-radius: 10px;
+  transform: translate(-50%, -50%) rotateZ(-45deg);
+	mix-blend-mode: exclusion;
+}
+.arrow:after {
+  transform-origin: bottom left;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+.arrow:nth-child(1) {
+  opacity: 0.3;
+  top: 35%;
+}
+.arrow:nth-child(2) {
+  opacity: 0.6;
+  top: 55%;
+}
+.arrow:nth-child(3) {
+  opacity: 0.9;
+  top: 75%;
+}
+#lower {
+	min-height: 60%;
+}
+#transitive {
+	height: 600px;
+	background-image: linear-gradient(rgba(0,0,0,0), black);
+}
+#intermediate {
+	border-top: 1px solid black;
+	height: 1000px;
+	background-color: black;
+}
+p {
+	font-family: "Cabin", sans-serif;
+	font-size: 1.5rem;
+	color: white;
+}
+h1 {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 4rem;
+	color: bisque;
+}
+#set-height {
+  display: block;
+}
+#v0 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+	z-index: 999;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translate(0, 30vh); filter: blur(10px);}
+  100% { opacity: 1; filter: blur(0px);}
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	* {
+		animation: none;
+		transition: none;
+	}
+}

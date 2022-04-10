@@ -144,3 +144,10 @@ body {
   color: var(--bs-blue);
   background-color: var(--bs-light);
 }
+
+#casti:hover ul,
+#casti:focus-within ul,
+#casti:hover {
+  visibility: visible;
+  opacity: 1;
+}

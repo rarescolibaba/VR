@@ -106,10 +106,8 @@ body {
 }
 
 .dropdown-menu {
-  position: static;
   display: block;
   width: auto;
-  margin: 4rem auto;
 }
 
 .dropdown-menu-macos {
@@ -144,10 +142,9 @@ body {
   color: var(--bs-blue);
   background-color: var(--bs-light);
 }
-
-#casti:hover ul,
-#casti:focus-within ul,
-#casti:hover {
-  visibility: visible;
-  opacity: 1;
+#casti #dropdownMacos {
+	visibility: hidden;
+}
+#casti:hover #dropdownMacos {
+	visibility: visible;
 }
